@@ -53,6 +53,11 @@ public partial class MainPage : ContentPage
 		_ = Navigation.PushAsync(new ListViewPage());
 	}
 
+	private void OnPopupPageButtonClicked(object sender, EventArgs e)
+	{
+		_ = Navigation.PushAsync(new PopupPage());
+	}
+
 	private static string ConvertByteCountToString(long? byteCount)
     {
         if (byteCount == null)

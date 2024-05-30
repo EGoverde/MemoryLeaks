@@ -1,9 +1,7 @@
 namespace MemoryLeaks;
 
-public partial class ListViewPage : ContentPage
+public partial class ListViewPage : BasePage
 {
-	private byte[] _memoryHog = new byte[100000000];
-
 	public ListViewPage()
 	{
 		InitializeComponent();

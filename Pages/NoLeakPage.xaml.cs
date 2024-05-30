@@ -1,9 +1,7 @@
 namespace MemoryLeaks;
 
-public partial class NoLeakPage : ContentPage
+public partial class NoLeakPage : BasePage
 {
-	private byte[] _memoryHog = new byte[100000000];
-
 	public NoLeakPage()
 	{
 		InitializeComponent();

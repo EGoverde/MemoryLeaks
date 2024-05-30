@@ -5,4 +5,9 @@ It works by navigating to pages that consist only of an element suspected of lea
 
 After navigating back a popup will be shown if it has leaked. The memory tracker would also clearly increase by a large amount, which it will continue to do every navigation back-and-forth.
 
-Note that for the SyncFusion demonstration to work, a working license key has to be added in MauiProgram.cs (named 'SyncFusionLicenseKey').
+The SyncFusion license can optionally be added in MauiProgram.cs, but is not necessary to demonstrate these leaks.
+
+Currently demonstrating the following leaks:
+
+- **SfDataGrid** and **SfListView** on iOS: https://www.syncfusion.com/feedback/58293/sfdatagrid-and-sflistview-cause-a-memory-leak-in-maui-ios-and-macos
+- **SyncFusion Popup** on iOS and Android: (to be added)

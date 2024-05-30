@@ -1,9 +1,7 @@
 namespace MemoryLeaks;
 
-public partial class DataGridEmptyPage : ContentPage
+public partial class DataGridEmptyPage : BasePage
 {
-	private byte[] _memoryHog = new byte[100000000];
-
 	public DataGridEmptyPage()
 	{
 		InitializeComponent();

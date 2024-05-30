@@ -1,9 +1,7 @@
 namespace MemoryLeaks;
 
-public partial class DataGridPage : ContentPage
+public partial class DataGridPage : BasePage
 {
-	private byte[] _memoryHog = new byte[100000000];
-
 	public DataGridPage()
 	{
 		InitializeComponent();

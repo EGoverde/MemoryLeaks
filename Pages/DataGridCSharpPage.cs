@@ -1,17 +1,12 @@
-using MemoryToolkit.Maui;
 using Syncfusion.Maui.DataGrid;
 
 namespace MemoryLeaks;
 
-public class DataGridCSharpPage : ContentPage
+public class DataGridCSharpPage : BasePage
 {
-	private byte[] _memoryHog = new byte[100000000];
-
 	public DataGridCSharpPage()
 	{
 		Title = "DataGridCSharpPage";
-
-		LeakMonitorBehavior.SetCascade(this, true);
 
 		Content = new VerticalStackLayout
 		{
