@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MemoryLeaks.MainPage"
+             Title="SyncFusion Memory Leaks">
+
+    <ScrollView
+        Padding="30">
+
+        <VerticalStackLayout
+            Spacing="15">
+
+            <Border
+                StrokeShape="RoundRectangle 20"
+                BackgroundColor="LightGray"
+                Padding="20">
+
+                <VerticalStackLayout>
+
+                    <Label
+                        Text="Any Page with a SfDataGrid or SfListView added to it will not be cleared from memory." 
+                        HorizontalOptions="Center"/>
+                    
+                    <Label
+                        Text="Below are examples of this. Through AdamE.MemoryToolkit.Maui a popup is shown whenever leaks are detected." 
+                        HorizontalOptions="Center"/>
+                    
+                    <Label
+                        Text="Each page loads a large amount of bytes as well, to show that the memory keeps increasing when navigating."
+                        HorizontalOptions="Center"/>
+                    
+                    <Label
+                        x:Name="LabelMemoryTracker"
+                        HorizontalOptions="Center"
+                        Margin="0,20"/>
+
+                    <Label
+                        Text="As of the creation of this project the memory leak affects iOS and MacOS."
+                        HorizontalOptions="Center"/>
+                
+                </VerticalStackLayout>
+                
+            </Border>
+            
+            <Button
+                Text="Non-Leaking Page"
+                Clicked="OnNoLeakPageButtonClicked" />
+
+            <Label
+                Text="Default MAUI page without any SyncFusion elements. Does not leak."
+                FontSize="14"
+                FontAttributes="Italic"
+                HorizontalOptions="Center"/>
+
+            <Button
+                Text="DataGrid Page without values (Leaking)"
+                Clicked="OnDataGridEmptyPageButtonClicked" />
+            
+            <Label
+                Text="Page with a DataGrid that does not have any values set. Causes a memory leak on iOS."
+                FontSize="14"
+                FontAttributes="Italic"
+                HorizontalOptions="Center"/>
+
+            <Button
+                Text="DataGrid Page with sample values (Leaking)"
+                Clicked="OnDataGridPageButtonClicked" />
+            
+            <Label
+                Text="Page with a DataGrid that matches the sample from the documentation. Causes a memory leak on iOS."
+                FontSize="14"
+                FontAttributes="Italic"
+                HorizontalOptions="Center"/>
+
+            <Button
+                Text="DataGrid Page without XAML (Leaking)"
+                Clicked="OnDataGridCSharpPageButtonClicked" />
+            
+            <Label
+                Text="Page with a DataGrid that is created entirely in C# and not using XAML. Causes a memory leak on iOS."
+                FontSize="14"
+                FontAttributes="Italic"
+                HorizontalOptions="Center"/>
+
+            <Button
+                Text="SfListVIew Page without values (Leaking)"
+                Clicked="OnListViewPageButtonClicked" />
+            
+            <Label
+                Text="Page with a SfListView that does not have any values set. Causes a memory leak on iOS."
+                FontSize="14"
+                FontAttributes="Italic"
+                HorizontalOptions="Center"/>
+
+        </VerticalStackLayout>
+
+    </ScrollView>
+
+</ContentPage>

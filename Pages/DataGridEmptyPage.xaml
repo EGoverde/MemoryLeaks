@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:mtk="clr-namespace:MemoryToolkit.Maui;assembly=MemoryToolkit.Maui"
+             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.DataGrid;assembly=Syncfusion.Maui.DataGrid"
+             x:Class="MemoryLeaks.DataGridEmptyPage"
+             mtk:LeakMonitorBehavior.Cascade="True"
+             Title="DataGridEmptyPage">
+
+    <VerticalStackLayout
+        Padding="40">
+
+        <syncfusion:SfDataGrid
+            MinimumHeightRequest="100"
+            MinimumWidthRequest="450"
+            BackgroundColor="LightGray" />
+
+    </VerticalStackLayout>
+
+</ContentPage>

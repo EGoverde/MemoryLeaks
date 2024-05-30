@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:MemoryLeaks"
+             xmlns:mtk="clr-namespace:MemoryToolkit.Maui;assembly=MemoryToolkit.Maui"
+             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.DataGrid;assembly=Syncfusion.Maui.DataGrid"
+             x:Class="MemoryLeaks.DataGridPage"
+             x:DataType="local:DataGridViewModel"
+             mtk:LeakMonitorBehavior.Cascade="True"
+             Title="DataGridPage">
+
+    <VerticalStackLayout
+        Padding="40">
+
+        <syncfusion:SfDataGrid
+            MinimumHeightRequest="100"
+            MinimumWidthRequest="450"
+            BackgroundColor="LightGray"
+            ItemsSource="{Binding OrderInfoCollection}">
+
+            <syncfusion:SfDataGrid.Columns>
+
+                <syncfusion:DataGridNumericColumn
+                    HeaderText="Order ID"
+                    MappingName="OrderID"
+                    Width="150"
+                    Format="0" />
+
+                <syncfusion:DataGridTextColumn
+                    HeaderText="Customer ID"
+                    MappingName="CustomerID"
+                    Width="150" />
+
+                <syncfusion:DataGridTextColumn
+                    HeaderText="Ship Country"
+                    MappingName="ShipCountry"
+                    Width="150" />
+
+                </syncfusion:SfDataGrid.Columns>
+            
+            </syncfusion:SfDataGrid>
+
+    </VerticalStackLayout>
+
+</ContentPage>
