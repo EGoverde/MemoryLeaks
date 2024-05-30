@@ -1,3 +1,5 @@
+# Memory Leak Demonstration
+
 This project has been created to demonstrate memory leaks by implementing the [MemoryToolkit.Maui](https://github.com/AdamEssenmacher/MemoryToolkit.Maui), as well as a memory tracker.
 It works by navigating to pages that consist only of an element suspected of leaking, followed by navigating back. These pages also hold a large amount of memory through a byte[].
 
