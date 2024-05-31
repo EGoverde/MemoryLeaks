@@ -9,6 +9,9 @@ The SyncFusion license can optionally be added in MauiProgram.cs, but is not nec
 
 Currently demonstrating the following leaks:
 
-- **SfDataGrid** on iOS: [https://www.syncfusion.com/feedback/58293/sfdatagrid-and-sflistview-cause-a-memory-leak-in-maui-ios-and-macos](https://www.syncfusion.com/feedback/58293/sfdatagrid-causes-a-memory-leak-in-maui-ios-and-macos)
-- **SfListView** on iOS: [https://www.syncfusion.com/feedback/58309/sflistview-causes-a-memory-leak-in-maui-ios-and-macos](https://www.syncfusion.com/feedback/58309/sflistview-causes-a-memory-leak-in-maui-ios-and-macos)
-- **SyncFusion Popup** on iOS and Android: [https://www.syncfusion.com/feedback/58300/sfpopup-causes-a-memory-leak-in-maui-ios-macos-and-android](https://www.syncfusion.com/feedback/58300/sfpopup-causes-a-memory-leak-in-maui-ios-macos-and-android)
+- **SfDataGrid** on iOS: [SyncFusion Bug Report #58293](https://www.syncfusion.com/feedback/58293/sfdatagrid-causes-a-memory-leak-in-maui-ios-and-macos)
+- **SfListView** on iOS: [SyncFusion Bug Report #58309](https://www.syncfusion.com/feedback/58309/sflistview-causes-a-memory-leak-in-maui-ios-and-macos)
+- **SyncFusion Popup** on iOS and Android: [SyncFusion Bug Report #58300](https://www.syncfusion.com/feedback/58300/sfpopup-causes-a-memory-leak-in-maui-ios-macos-and-android)
+
+
+![afbeelding](https://github.com/EGoverde/MemoryLeaks/assets/3169710/4a8cdd6a-72be-4643-8514-d973db396e55)
