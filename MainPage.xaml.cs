@@ -43,11 +43,6 @@ public partial class MainPage : ContentPage
 		_ = Navigation.PushAsync(new DataGridEmptyPage());
 	}
 
-	private void OnDataGridCSharpPageButtonClicked(object sender, EventArgs e)
-	{
-		_ = Navigation.PushAsync(new DataGridCSharpPage());
-	}
-
 	private void OnListViewPageButtonClicked(object sender, EventArgs e)
 	{
 		_ = Navigation.PushAsync(new ListViewPage());

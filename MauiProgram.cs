@@ -26,7 +26,7 @@ public static class MauiProgram
 
 				if (collectionTarget.Name.Contains("Page"))
 				{
-					Application.Current?.MainPage?.DisplayAlert("Leak Detected", $"{collectionTarget.Name} is a zombie.", "OK");
+					Application.Current?.MainPage?.DisplayAlert("Memory Leak", $"{collectionTarget.Name} remains in memory.", "OK");
 				}
 			});
 
