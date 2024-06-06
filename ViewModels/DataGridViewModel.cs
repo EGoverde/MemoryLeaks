@@ -1,6 +1,5 @@
 ﻿using System.Collections.ObjectModel;
 using CommunityToolkit.Mvvm.ComponentModel;
-using Syncfusion.Maui.ListView;
 
 namespace MemoryLeaks;
 

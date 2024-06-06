@@ -7,11 +7,20 @@ public partial class MainPage : ContentPage
 		InitializeComponent();
 	}
 
+	public static bool MemoryLeakPopupWasShown { get; set; }
+
     protected override void OnAppearing()
     {
         base.OnAppearing();
 
 		_ = ReloadMemoryAsync();
+    }
+
+    protected override void OnNavigatedFrom(NavigatedFromEventArgs args)
+    {
+        base.OnNavigatedFrom(args);
+
+		MemoryLeakPopupWasShown = false;
     }
 
     private async Task ReloadMemoryAsync()
@@ -31,6 +40,11 @@ public partial class MainPage : ContentPage
 	private void OnNoLeakPageButtonClicked(object sender, EventArgs e)
 	{
 		_ = Navigation.PushAsync(new NoLeakPage());
+	}
+
+	private void OnCollectionViewPageClicked(object sender, EventArgs e)
+	{
+		_ = Navigation.PushAsync(new CollectionViewPage());
 	}
 
 	private void OnDataGridPageButtonClicked(object sender, EventArgs e)

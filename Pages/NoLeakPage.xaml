@@ -4,7 +4,6 @@
              xmlns:local="clr-namespace:MemoryLeaks"
              xmlns:mtk="clr-namespace:MemoryToolkit.Maui;assembly=MemoryToolkit.Maui"
              x:Class="MemoryLeaks.NoLeakPage"
-             mtk:LeakMonitorBehavior.Cascade="True"
              Title="NoLeakPage">
 
     <VerticalStackLayout

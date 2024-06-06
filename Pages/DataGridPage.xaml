@@ -6,7 +6,6 @@
              xmlns:syncfusion="clr-namespace:Syncfusion.Maui.DataGrid;assembly=Syncfusion.Maui.DataGrid"
              x:Class="MemoryLeaks.DataGridPage"
              x:DataType="local:DataGridViewModel"
-             mtk:LeakMonitorBehavior.Cascade="True"
              Title="DataGridPage">
 
     <VerticalStackLayout

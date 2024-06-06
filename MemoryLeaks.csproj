@@ -59,12 +59,15 @@
 	<ItemGroup>
 		<PackageReference Include="AdamE.MemoryToolkit.Maui" Version="1.0.0" />
 		<PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.2" />
-		<PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
-		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.0" />
 		<PackageReference Include="Syncfusion.Maui.DataGrid" Version="25.2.6" />
 		<PackageReference Include="Syncfusion.Maui.ListView" Version="25.2.6" />
 		<PackageReference Include="Syncfusion.Maui.Popup" Version="25.2.6" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.Maui.Controls" Version="8.0.60-ci.net8.24304.1" />
+		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="8.0.60-ci.net8.24304.1" />
 	</ItemGroup>
 
 </Project>

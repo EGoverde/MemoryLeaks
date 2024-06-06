@@ -5,7 +5,6 @@
              xmlns:mtk="clr-namespace:MemoryToolkit.Maui;assembly=MemoryToolkit.Maui"
              xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Popup;assembly=Syncfusion.Maui.Popup"
              x:Class="MemoryLeaks.PopupPage"
-             mtk:LeakMonitorBehavior.Cascade="True"
              Title="PopupPage">
 
     <VerticalStackLayout

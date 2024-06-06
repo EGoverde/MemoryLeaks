@@ -5,7 +5,6 @@
              xmlns:mtk="clr-namespace:MemoryToolkit.Maui;assembly=MemoryToolkit.Maui"
              xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView"
              x:Class="MemoryLeaks.ListViewPage"
-             mtk:LeakMonitorBehavior.Cascade="True"
              Title="ListViewPage">
 
     <VerticalStackLayout

@@ -24,15 +24,17 @@ public static class MauiProgram
 			{
 				Debug.WriteLine($"❗🧟❗{collectionTarget.Name} is a zombie! 💦Leak Detected💦");
 
-				if (collectionTarget.Name.Contains("Page"))
+				if (!MainPage.MemoryLeakPopupWasShown)
 				{
-					Application.Current?.MainPage?.DisplayAlert("Memory Leak", $"{collectionTarget.Name} remains in memory.", "OK");
+					Application.Current?.MainPage?.DisplayAlert("Memory Leak", "A memory leak has been detected, check the debug output for the full list.", "OK");
+					MainPage.MemoryLeakPopupWasShown = true;
 				}
 			});
 
 #if DEBUG
 		builder.Logging.AddDebug();
 #endif
+
 
 		return builder.Build();
 	}

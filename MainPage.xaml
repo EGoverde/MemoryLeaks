@@ -22,7 +22,10 @@
                         Text="This project demonstrates memory leaks existing in MAUI or third-party packages. Each page below holds a component that causes its parent page to remain in memory." />
                     
                     <Label
-                        Text="Every page loads a large amount of bytes as well, to show that the memory keeps increasing when navigating. Through AdamE.MemoryToolkit.Maui a popup is also shown whenever leaks are detected." />
+                        Text="Note that on leaking pages the the memory keeps increasing when navigating. Through AdamE.MemoryToolkit.Maui a popup is shown whenever leaks are detected." />
+                        
+                    <Label
+                        Text="Finally every page loads a large amount of bytes as well, so if the entire page is leaked it will be very noticable. This seems to have become less of an issue since using MAUI nightly." />
                     
                     <Label
                         x:Name="LabelMemoryTracker"
@@ -35,7 +38,7 @@
 
             <Grid
                 ColumnDefinitions="*, *"
-                RowDefinitions="Auto, Auto, Auto, Auto, Auto"
+                RowDefinitions="Auto, Auto, Auto, Auto, Auto, Auto"
                 RowSpacing="10"
                 ColumnSpacing="10">
             
@@ -49,47 +52,58 @@
                     Grid.Column="1"
                     Text="Default MAUI page without any leaking elements."
                     VerticalOptions="Center"/>
-
+                
                 <Button
                     Grid.Row="1"
+                    Text="CollectionView with header and footer"
+                    Clicked="OnCollectionViewPageClicked" />
+
+                <Label
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    Text="Page with a CollectionView and content in the Header and Footer. Causes a memory leak on iOS."
+                    VerticalOptions="Center"/>
+
+                <Button
+                    Grid.Row="2"
                     Text="DataGrid with data"
                     Clicked="OnDataGridPageButtonClicked" />
                 
                 <Label
-                    Grid.Row="1"
+                    Grid.Row="2"
                     Grid.Column="1"
                     Text="Page with a DataGrid that matches the sample from the documentation. Causes a memory leak on iOS."
                     VerticalOptions="Center"/>
 
                 <Button
-                    Grid.Row="2"
+                    Grid.Row="3"
                     Text="DataGrid without data"
                     Clicked="OnDataGridEmptyPageButtonClicked" />
                 
                 <Label
-                    Grid.Row="2"
+                    Grid.Row="3"
                     Grid.Column="1"
                     Text="Page with a DataGrid that does not have any values set. Causes a memory leak on iOS."
                     VerticalOptions="Center"/>
 
                 <Button
-                    Grid.Row="3"
+                    Grid.Row="4"
                     Text="SfListView"
                     Clicked="OnListViewPageButtonClicked" />
                 
                 <Label
-                    Grid.Row="3"
+                    Grid.Row="4"
                     Grid.Column="1"
                     Text="Page with a SfListView that does not have any values set. Causes a memory leak on iOS."
                     VerticalOptions="Center"/>
 
                 <Button
-                    Grid.Row="4"
+                    Grid.Row="5"
                     Text="SfPopup"
                     Clicked="OnPopupPageButtonClicked" />
                 
                 <Label
-                    Grid.Row="4"
+                    Grid.Row="5"
                     Grid.Column="1"
                     Text="Page with a SyncFusion Popup. Causes a memory leak on iOS and Android."
                     VerticalOptions="Center"/>

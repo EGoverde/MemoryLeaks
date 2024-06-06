@@ -5,7 +5,6 @@
              xmlns:mtk="clr-namespace:MemoryToolkit.Maui;assembly=MemoryToolkit.Maui"
              xmlns:syncfusion="clr-namespace:Syncfusion.Maui.DataGrid;assembly=Syncfusion.Maui.DataGrid"
              x:Class="MemoryLeaks.DataGridEmptyPage"
-             mtk:LeakMonitorBehavior.Cascade="True"
              Title="DataGridEmptyPage">
 
     <VerticalStackLayout
