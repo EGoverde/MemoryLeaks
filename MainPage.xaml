@@ -25,7 +25,7 @@
                         Text="Note that on leaking pages the the memory keeps increasing when navigating. Through AdamE.MemoryToolkit.Maui a popup is shown whenever leaks are detected." />
                         
                     <Label
-                        Text="Finally every page loads a large amount of bytes as well, so if the entire page is leaked it will be very noticable. This seems to have become less of an issue since using MAUI nightly." />
+                        Text="Finally every page loads a large amount of bytes as well, so if the entire page is leaked it will be very noticable. This is not always the case, but point to a more severe issue." />
                     
                     <Label
                         x:Name="LabelMemoryTracker"
